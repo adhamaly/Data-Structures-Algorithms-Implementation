@@ -21,6 +21,7 @@ public static void printSorted(int[] array){
         System.out.print(array[i] +",");
     }
     System.out.print("]");
+    System.out.println("hello");
 
 }
 }
