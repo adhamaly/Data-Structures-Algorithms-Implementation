@@ -1,75 +1,74 @@
- class Main {
+import java.util.Scanner;
+
+class Main {
     public static void main(String[] args) {
-        
-        /*
-        StackADT<Integer> s = new StackADT<>(10);       
-        s.push(10);
-        s.push(100);
-        s.push(200);
-        s.push(300);
-        s.push(400);
 
-        s.printStack();
-        s.pop();
-        s.printStack();
-        int x = s.peek();
-        System.out.println(x);
 
-        QueueADT<Character> q = new QueueADT<>(10);
-        q.Enqueue('a');
-        q.Enqueue('b');
-        q.Enqueue('c');
-        q.Enqueue('d');
+    Scanner input = new Scanner(System.in);
+    
+    // adding 5 StudentNames into LinkedList
+    LinkedListADT<String> StudentsList = new LinkedListADT<>();
+    int i = 0;
+    while(i<5){
+    StudentsList.insertAtTop(input.nextLine());
+    i++;
+    }
+    StudentsList.printLinkedList();
+    //------------------------------------------
 
-        q.dequeue();
-        q.dequeue();
+    // adding 5 people in Queue which are waiting ..
 
-        q.printQueue();
+    QueueADT<String> queuedPeople = new QueueADT<>(5);
+    int x = 0;
+    while(x<5){
+        queuedPeople.Enqueue(input.nextLine());
+    x++;
+    }
+    queuedPeople.printQueue();
+    // dequeue first 2 people
+    queuedPeople.dequeue();
+    queuedPeople.dequeue();
+    queuedPeople.printQueue();
 
-        System.out.println("------------------------------------------");
-        LinkedListADT<Integer> l  = new LinkedListADT<>();
-        l.insertAtTop(1);
-        l.insertAtTop(2);
-        l.insertAtTop(3);
-        l.insertAtTop(4);
-        l.printLinkedList();
-
-        int ltop =l.getTop();
-        int lindex = l.getAtIndex(2);
-        System.err.println(ltop + "  ,  "+lindex);
-        l.insertAt(6, 1);
-
-        l.printLinkedList();
-        System.out.println("\n after delete-------------------------");
-
-        l.removeTop();
-
-        l.printLinkedList();
-        ltop = l.getTop();
-        lindex = l.getAtIndex(2);
-        System.err.println(ltop + "  ,  "+lindex);
-        l.printLinkedList();
-
-        l.removeAtIndex(2);
-        System.out.println("\n-------------------------");
-
-        l.printLinkedList();
-System.out.println("\n-------------------------");
-        LinkedListADT<Integer> l2  = new LinkedListADT<>();
-        l2.insertAtTop(1);
-        l2.printLinkedList();
-       int  l2top =l2.getTop();
-       System.out.println(l2top);
-       l2.removeTop();
-       l2.printLinkedList();
-
-*/
-        int[] array = {4,2,6,5,3,1};
-       
-        array = BubbleSort.Sort(array);
-        BubbleSort.printSorted(array);
+    //---------------------------------------
+    // adding 6 books in box and then pop first 3 books
+    StackADT<String> Box = new StackADT<>(6);
+    int y = 0;
+    while(y<6){
+        Box.push(input.nextLine());
+    y++;
+    }
+    Box.printStack();
+    Box.pop();
+    Box.pop();
+    Box.pop();
+    Box.printStack();
+    
+    //--------------------
+    int[] ages = {21,12,13,14,16,22,32,33};
+    SelectionSort.Sort(ages);
+    System.out.print("selection Sort ... ");
+    SelectionSort.printSortedArray(ages);
+    System.err.print("\n");
+    //------------------------------
+    InsertionSort.Sort(ages);
+    System.out.print("Insertion  Sort ... ");
+    InsertionSort.printSorted(ages);
+    System.err.print("\n");
+    //--------------------------------
+    BubbleSort.Sort(ages);
+    System.out.print("Bubble Sort ... ");
+    BubbleSort.printSorted(ages);
+    System.err.print("\n");
+    //------------------------------
+    MergeSort.Sort(ages, ages.length);
+    System.out.print("Merge Sort ... ");
+    MergeSort.printSorted(ages);
 
 
 
+
+
+    
     }
 }
