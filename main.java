@@ -60,10 +60,7 @@ class Main {
     System.out.print("Bubble Sort ... ");
     BubbleSort.printSorted(ages);
     System.err.print("\n");
-    //------------------------------
-    MergeSort.Sort(ages, ages.length);
-    System.out.print("Merge Sort ... ");
-    MergeSort.printSorted(ages);
+  
 */
     // Search an array using Linear Search
     int[] employeeId = {101,102,103,104,105,106,107};
@@ -73,6 +70,9 @@ class Main {
     int id2 = new BinarySearch().Search(employeeId, 104);
     System.out.println("employee Id = "+id2);
 
+    int[] a = {19,8,-13,2,-5,4,100,30};
+    MergeSort.Sort(a,0, a.length-1);
+    MergeSort.printSorted(a);
 
 
 
