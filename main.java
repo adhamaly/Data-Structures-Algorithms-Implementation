@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
 
-
+/*
     Scanner input = new Scanner(System.in);
     
     // adding 5 StudentNames into LinkedList
@@ -64,6 +64,14 @@ class Main {
     MergeSort.Sort(ages, ages.length);
     System.out.print("Merge Sort ... ");
     MergeSort.printSorted(ages);
+*/
+    // Search an array using Linear Search
+    int[] employeeId = {101,102,103,104,105,106,107};
+    int id = new LinearSearch().Search(employeeId, 104);
+    System.out.println("employee Id = "+id);
+
+    int id2 = new BinarySearch().Search(employeeId, 104);
+    System.out.println("employee Id = "+id2);
 
 
 
