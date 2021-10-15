@@ -44,5 +44,26 @@ public class StackADT<T> {
 
     }
 
+    public int contain(T item){
+        
+        
+        for (int i = 0; i < a.length; i++) {
+            if(item == a[i]){
+                return i;
+            }
+            
+        }
+        return -1;
+        
+      
+    }
+
+    public boolean isEmpty(){
+        return last == -1;
+    }
+
+    public int getSize(){
+        return last+1;
+    }
     
 }

@@ -155,5 +155,49 @@ public class LinkedListADT<T> {
     }
 
 
+    public int contain(T item){
+
+        if(head == null){
+            return -1;
+        }
+        else{
+            int i= 0;
+            Node node = head;
+            while(node!=null){
+              
+                if(node.value == item){
+                    return i;
+                }
+                node  = node.next;
+                i++;
+            }
+        }
+        return -1;
+
+
+
+    }
+
+    public boolean isEmpty(){
+        return head == null;
+    }
+
+    public int getSize(){
+        int i= 0;
+        if(head == null){
+            return -1;
+        }
+        else{
+            Node node = head;
+            while(node!=null){
+              
+                node  = node.next;
+                i++;
+            }
+        }
+        return i;
+
+        
+    }
     
 }

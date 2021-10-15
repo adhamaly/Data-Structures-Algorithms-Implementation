@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 class Main {
@@ -74,6 +76,36 @@ class Main {
     MergeSort.Sort(a,0, a.length-1);
     MergeSort.printSorted(a);
 
+    System.out.println(Period.between(LocalDate.of(1999, 3, 1), LocalDate.now()).getYears());
+
+    StackADT<Character> s = new StackADT<>(10);
+    s.push('a');
+    s.push('b');
+    s.push('c');
+    System.out.println(s.isEmpty());
+    System.out.println(s.contain('b'));
+    System.out.println(s.getSize());
+
+    QueueADT<Character> q = new QueueADT<>(10);
+    q.Enqueue('a');
+    q.Enqueue('b');
+    q.Enqueue('c');
+    System.out.println(q.isEmpty());
+    System.out.println(q.contain('b'));
+    System.out.println(q.getSize());
+
+    LinkedListADT<Character> l = new LinkedListADT<>();
+    l.insertAtTop('a');
+    l.insertAtTop('b');
+    l.insertAtTop('c');
+
+    System.out.println("index of b "+l.contain('c'));
+    System.out.println(l.getSize());
+
+
+
+  
+    
 
 
 

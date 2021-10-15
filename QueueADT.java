@@ -40,4 +40,25 @@ public class QueueADT<T>{
     }
 
 
+    public int contain(T item){
+        
+        
+        for (int i = 0; i < a.length; i++) {
+            if(item == a[i]){
+                return i;
+            }
+            
+        }
+        return -1;
+        
+      
+    }
+
+    public boolean isEmpty(){
+        return top == -1;
+    }
+    public int getSize(){
+        return top+1;
+    }
+
 }
