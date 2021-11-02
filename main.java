@@ -106,7 +106,14 @@ class Main {
         l.insertAtTop(4);
         l.insertAtTop(2);
         l.insertAtTop(100);
-        System.out.println(Integer.valueOf(l.getMax()));       
+        System.out.println(Integer.valueOf(l.getMax()));    
+        
+        StackADT<Double> s =new StackADT<>(Double.class, 10);
+        s.push(1.9);
+        s.push(3.9);
+        s.push(5.9);
+        s.push(7.9);
+        System.out.println(s.getMax());
 
     }
 
