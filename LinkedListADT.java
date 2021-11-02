@@ -1,4 +1,4 @@
-public class LinkedListADT<T> {
+public class LinkedListADT<T extends Comparable<T>> {
 
     class Node{
         Node next;
@@ -199,5 +199,23 @@ public class LinkedListADT<T> {
 
         
     }
+    public T getMax(){
+    
+   
+        if(isEmpty()) return null;
+        Node currNode = head;
+        T max = currNode.value;
+        while(currNode!=null){
+            if(currNode.value.compareTo(max) >0){
+                max = currNode.value;
+            }
+            currNode = currNode.next;
+
+        }
+        return max;
+
+    
+    }
+
     
 }

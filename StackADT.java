@@ -1,12 +1,14 @@
-public class StackADT<T> {
+import java.lang.reflect.Array;
+
+public class StackADT<T extends Comparable<T>> {
     
     private int last = -1;
     private T[] a;
     private int size;
 
-    public StackADT(int _size){
+    public StackADT(Class<T> clazz,int _size){
         this.size = _size;
-        a = (T[]) new Object[this.size];
+        a = (T[]) Array.newInstance(clazz, this.size);;
 
     }
 
@@ -64,6 +66,16 @@ public class StackADT<T> {
 
     public int getSize(){
         return last+1;
+    }
+    public T getMax(){
+        T max = a[0];
+        for (int i = last; i >-1; i--) {
+
+            if(a[i].compareTo(max) > 0){
+                max = a[i];
+            }
+        }
+        return max;
     }
     
 }
