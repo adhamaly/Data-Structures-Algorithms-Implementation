@@ -6,7 +6,7 @@ public class QueueADT<T extends Comparable<T>> {
     private int top = -1;
     private T[] a;
 
-    public QueueADT(Class<T> clazz,int _size) {
+    public QueueADT(Class<?> clazz,int _size) {
         this.size = _size;
         a = (T[]) Array.newInstance(clazz, this.size);
 

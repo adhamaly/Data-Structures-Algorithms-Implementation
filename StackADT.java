@@ -1,5 +1,4 @@
 import java.lang.reflect.Array;
-
 public class StackADT<T extends Comparable<T>> {
     
     private int last = -1;
